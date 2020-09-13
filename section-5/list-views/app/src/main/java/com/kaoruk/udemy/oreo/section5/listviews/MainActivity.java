@@ -14,6 +14,8 @@ import android.widget.Toast;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,12 +26,8 @@ public class MainActivity extends AppCompatActivity {
 
         ListView myListView = findViewById(R.id.myListView);
 
-        final ArrayList<String> whitePeopleNames = new ArrayList<>();
+        final List<String> whitePeopleNames = Arrays.asList("John", "Sarah", "Pete", "Erin");
 
-        whitePeopleNames.add("John");
-        whitePeopleNames.add("Sarah");
-        whitePeopleNames.add("Pete");
-        whitePeopleNames.add("Erin");
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, whitePeopleNames);
 
